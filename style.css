@@ -1,32 +1,46 @@
 .containeur {
+  margin: 12em 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.carre {
-  background-color: lightgreen;
+.cercle {
   border: 1px solid;
-  width: 15em;
-  height: 15em;
-  transform: perspective(8.5cm);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes anime {
-  25% { transform: translateX(15em) rotateY(90deg); }
-  50% { background-color: transparent; border: none; transition-duration: none;}
-  75% { transform: translateX(-15em) rotateY(-90deg); }
+.txt_moon {
+  font-size: 3em;
 }
 
-.div1 {
-  animation: anime 3s infinite ease-in-out;
+.txt_earth {
+  font-size: 5em;
 }
 
-.div2:hover {
-  animation: anime 1s 1 ease-in-out;
+.earth {
+  position: absolute;
+  background-color: #0C7593;
+  width: 30em;
+  height: 30em;
 }
 
-.div3:hover {
-  animation: anime 0.5s 3 ease-in-out;
+@keyframes moon {
+  45% { transform: translateX(17em) rotateY(90deg); }
+  50% { background-color: transparent; border: none; transition-duration: none; color: transparent;}
+  55% { transform: translateX(-17em) rotateY(-90deg); }
+}
+
+.moon {
+  position: relative;
+  z-index: 2;
+  background-color: #B1B1B3;
+  width: 12em;
+  height: 12em;
+  animation: moon 3s infinite ease-in-out;
+  transform: perspective(2.5cm);
 }
