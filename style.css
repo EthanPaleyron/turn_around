@@ -1,0 +1,32 @@
+.containeur {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.carre {
+  background-color: lightgreen;
+  border: 1px solid;
+  width: 15em;
+  height: 15em;
+  transform: perspective(8.5cm);
+}
+
+@keyframes anime {
+  25% { transform: translateX(15em) rotateY(90deg); }
+  50% { background-color: transparent; border: none; transition-duration: none;}
+  75% { transform: translateX(-15em) rotateY(-90deg); }
+}
+
+.div1 {
+  animation: anime 3s infinite ease-in-out;
+}
+
+.div2:hover {
+  animation: anime 1s 1 ease-in-out;
+}
+
+.div3:hover {
+  animation: anime 0.5s 3 ease-in-out;
+}
